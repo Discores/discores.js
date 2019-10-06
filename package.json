@@ -1,0 +1,22 @@
+{
+  "name": "jscord",
+  "version": "1.0.0",
+  "description": "Discord API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Discores/jscord.git"
+  },
+  "author": "Tristan Schmidt",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Discores/jscord/issues"
+  },
+  "homepage": "https://github.com/Discores/jscord#readme",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  }
+}
