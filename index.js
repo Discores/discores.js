@@ -25,7 +25,29 @@ exports.login = function(prefix, token, cmds) {
 
     for (const file of commandFiles) {
         const command = require(`./commands/${file}`);
-        client.commands.set(command.name, command);
+        var ifcommand = cmds.filter(function(cmd) {
+            return cmd.name == command.name
+        })
+        if (ifcommand.length == 1) {
+            var commandacceptance = true
+            function callback () {if (commandacceptance == true) {
+                client.commands.set(command.name, command);
+            }}
+            var itemsProcessed = 0;
+            command.requirements.forEach((item, index, array) => {
+                eval(`
+                    if (!ifcommand[0].${item}) {
+                        commandacceptance = false;
+                    }
+                `)
+                itemsProcessed++;
+                if(itemsProcessed === array.length) {
+                callback();
+                }
+            })
+            
+        }
+        
     }
 
     client.on('message', message => {
