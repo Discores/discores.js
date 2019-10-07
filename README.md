@@ -9,6 +9,7 @@ Install the api using:
 npm i jscord
 ```
 
+Then create your main file, for a basic bot setup use the example and replace `'token'` with your bot token. 
 ```js
 const jscord = require('jscord')
 
