@@ -6,14 +6,14 @@ Every command you need is pre-built, the only thing we need is the commands you 
 
 ---
 
-**Installation**
+#**Installation**
 Install the api using:
 ```
 npm i jscord
 ```
 ---
 
-**Using the libary**
+#**Using the libary**
 Now create your main file, for a basic bot setup use the example and replace `'token'` with your bot token. 
 ```js
 const jscord = require('jscord')
@@ -31,5 +31,5 @@ jscord.login("!", 'token', cmds)
 
 ---
 
-**Info**
+#**Info**
 If you have any questions, feel free to contact `TrizlyBear#7066` on Discord or join [the Discord server](https://discord.gg/3Zs5ay7)
