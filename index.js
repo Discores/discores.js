@@ -57,9 +57,15 @@ exports.login = function(prefix, token, cmds) {
         const command = args.shift().toLowerCase();
     
         if (!client.commands.has(command)) return;
-    
+        
+        var thiscommand = cmds.filter(function(cmd) {
+            return cmd.name == command
+        })
+
+        var outputs = thiscommand[0]
+        
         try {
-            client.commands.get(command).execute(message, message, args);
+            client.commands.get(command).execute(client, message, args, outputs);
         } catch (error) {
             console.error(error);
             message.reply('there was an error trying to execute that command!');
