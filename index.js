@@ -38,6 +38,7 @@ exports.login = function(prefix, token, cmds) {
                 eval(`
                     if (!ifcommand[0].${item}) {
                         commandacceptance = false;
+                        console.log("The " + item + " output is required to run the " + command.name + " command.")
                     }
                 `)
                 itemsProcessed++;
