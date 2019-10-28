@@ -1,4 +1,4 @@
-# JScord
+# Discores.js
 A Discord API built using Discord.js, with pre-built commands.
 Not wanting to write every commands, don't worry, we've got you covered.
 
